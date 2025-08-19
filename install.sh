@@ -57,6 +57,14 @@ else
     print_status "skhd is already installed"
 fi
 
+# Install jq
+if ! brew list jq &> /dev/null; then
+    print_status "Installing skhd..."
+    brew install jq
+else
+    print_status "jq is already installed"
+fi
+
 # Install Karabiner-Elements
 if ! brew list --cask karabiner-elements &> /dev/null; then
     print_status "Installing Karabiner-Elements..."
