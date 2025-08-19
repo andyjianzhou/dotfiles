@@ -29,6 +29,7 @@ Run the install script:
 ```bash
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
+brew install jq
 brew install --cask karabiner-elements
 ```
 
