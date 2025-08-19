@@ -88,3 +88,22 @@ dotfiles/
 └── karabiner/
     └── karabiner.json
 ```
+
+# Commands to run to ensure that minimizing focuses and highlights borders.
+
+Due to MacOs having slow animation times, some of the borders functionality would break. To fix this, you can either disable, OR speed up the process like I did
+
+Run this in your terminal
+```
+# Make animations much faster (0.1 = 10x faster)
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.1
+defaults write com.apple.dock autohide-time-modifier -float 0.1
+defaults write com.apple.dock autohide-delay -float 0.1
+defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock springboard-show-duration -float 0.1
+defaults write com.apple.dock springboard-hide-duration -float 0.1
+defaults write com.apple.dock springboard-page-duration -float 0.1
+defaults write com.apple.finder DisableAllAnimations -bool true
+killall Dock
+killall Finder
+```
