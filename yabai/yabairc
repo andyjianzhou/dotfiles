@@ -39,9 +39,12 @@ yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^iTerm2$" manage=off
+yabai -m rule --add app="^Warp$" manage=off
+yabai -m rule --add app="^FaceTime$" manage=off
+yabai -m rule --add app="^Messages$" manage=off
 
-# example: show shadows only for floating windows
-yabai -m config window_shadow float
+# disable window shadows
+yabai -m config window_shadow off
 
 # Keep borders (from your original config)
 killall borders &>/dev/null

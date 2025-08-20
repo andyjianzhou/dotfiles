@@ -4,7 +4,9 @@
 ## HYPER == SHIFT + ALT
 
 ## Quickly restart the yabai launch agent
-ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service
 
 ## Close active application
 shift + alt - backspace : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
@@ -14,7 +16,7 @@ shift + alt - backspace : $(yabai -m window $(yabai -m query --windows --window 
 #lshift - x : terminal-notifier -message "$(yabai -m query --windows --window | jq -re ".id")"
 
 ## open terminal
-shift + alt - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
+shift + alt - return : open -a /Applications/Warp.app
 
 ## swap window
 shift + alt - y : yabai -m window --swap west
@@ -171,3 +173,10 @@ shift + alt - e : yabai -m window --toggle split
 #ctrl + alt - 1 : yabai -m display --focus 1
 #ctrl + alt - 2 : yabai -m display --focus 2
 #ctrl + alt - 3 : yabai -m display --focus 3
+
+shift + alt - j : open -a arc
+shift + alt - k : open -a /Applications/WezTerm.app
+shift + alt - l : open -a messages;
+shift + alt - 0x29 : open -a spotify
+shift + alt - c : open -a "Visual Studio Code"
+shift + alt - g : open -a /Applications/Discord.app;
