@@ -48,9 +48,10 @@ yabai -m rule --add app="^Ghostty$" manage=off
 # disable window shadows
 yabai -m config window_shadow off
 
-# Keep borders (from your original config)
+# borders
 killall borders &>/dev/null
-borders active_color=0xff0165fc width=8.0 &
+borders active_color=0xff0165fc width=2.0 &
+
 
 # Auto-focus another window when one is minimized
 yabai -m signal --add event=window_minimized active=yes action="sleep 0.1; yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
