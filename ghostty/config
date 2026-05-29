@@ -1,0 +1,2 @@
+# Shell integration for proper working directory tracking
+shell-integration = detect

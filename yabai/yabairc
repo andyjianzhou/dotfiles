@@ -42,6 +42,8 @@ yabai -m rule --add app="^iTerm2$" manage=off
 yabai -m rule --add app="^Warp$" manage=off
 yabai -m rule --add app="^FaceTime$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Ghostty$" manage=off
 
 # disable window shadows
 yabai -m config window_shadow off
